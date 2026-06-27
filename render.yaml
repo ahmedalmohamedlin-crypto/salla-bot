@@ -1,0 +1,26 @@
+services:
+  - type: worker
+    name: salla-telegram-bot
+    runtime: python
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: TELEGRAM_TOKEN
+        sync: false
+      - key: STORE1_NAME
+        value: "مايكرو"
+      - key: STORE1_TOKEN_URL
+        sync: false
+      - key: STORE2_NAME
+        value: "بيرق"
+      - key: STORE2_TOKEN_URL
+        sync: false
+      - key: STORE3_NAME
+        value: "الشاهين"
+      - key: STORE3_TOKEN_URL
+        sync: false
+      - key: STORE4_NAME
+        value: "زمرد"
+      - key: STORE4_TOKEN_URL
+        sync: false
